@@ -1,0 +1,194 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="material-timeline-style">    
+    <template>
+        <style>
+          .timeline {
+            position: relative;
+          }
+
+          .timeline .timeline-event {
+            position: relative;
+            padding-top: 5px;
+            padding-bottom: 5px;
+          }
+
+          .timeline .timeline-event .timeline-content {
+            position: relative;
+            width: calc(50%);
+          }
+
+
+          .timeline .timeline-event:nth-child(even)::before {
+            display: block;
+            content: "";
+            width: 50px;
+            height: 4px;
+            position: absolute;
+            background: #038175;
+            opacity: 0.4;
+            left: calc(50% - 2px);
+            top: calc(50%);
+          }
+
+          .timeline .timeline-event:nth-child(odd)::before {
+            display: block;
+            content: "";
+            width: 50px;
+            height: 4px;
+            position: absolute;
+            background: #038175;
+            opacity: 0.4;
+            left: calc(50% - 52px);
+            top: calc(50%);
+          }
+
+          .timeline .timeline-event::after {
+            display: block;
+            content: "";
+            width: 4px;
+            height: calc(100%);
+            position: absolute;
+            background: #038175;
+            opacity: 0.4;
+            left: calc(49.6%);
+            top: calc(50%);
+            margin-top: 8px;
+            z-index: -1;
+          }
+
+          .timeline .timeline-event .timeline-content::after{
+            width: 58px;
+            height: 4px;
+            position: absolute;
+            color: #000;
+          }
+
+          .timeline .timeline-event:nth-last-child(2)::after {
+            display: none;
+          }
+
+          .timeline .timeline-event:nth-child(even) .timeline-content {
+            margin-right:auto;
+            margin-left: calc(50%);
+          }
+
+          .timeline .timeline-event:nth-child(odd) .timeline-content {
+            text-align: right;  
+            margin-right:calc(50%);
+          }
+
+          .timeline .timeline-event:nth-child(even) .timeline-content .timeline-content-card{
+            margin-left: 50px;
+          }
+
+          .timeline .timeline-event:nth-child(odd) .timeline-content .timeline-content-card{
+            margin-right:50px;
+          }
+
+          .timeline .timeline-badge {
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #038175;
+            color:white;
+            top: calc(50% - 20px);
+            right: calc(50% - 20px);
+            border-radius: 50%;
+            text-align: center;
+            cursor: default;
+          }
+
+          .timeline-header-badge{
+            float:left;
+            margin-right: 10px;            
+            width: 40px;
+            height: 40px;
+            background-color: #038175;
+            color:white;
+            top: calc(50% - 20px);
+            right: calc(50% - 20px);
+            border-radius: 50%;
+            text-align: center;
+            cursor: default;
+          }
+          
+          .timeline-header-badge i:only-child{
+            line-height: 35px;
+            z-index: 10000;
+          }
+
+          .timeline .timeline-badge i:only-child{
+            line-height: 50px;
+            z-index: 10000;
+          }
+
+          .event-header{
+            text-align: left;
+            font-size: 18px;
+          }
+
+          .event-header-detail{
+            font-size: 13px;
+          }
+          
+          .event-sub-header{
+            text-align: left;
+            font-size: 14px;
+            color: #777;
+          }
+
+          .event-content{
+            text-align: left;
+          }
+
+          @media (max-width: 600px) {
+            
+            .timeline .timeline-event .timeline-content {
+              width: calc(100% - 70px);
+            }
+            .timeline .timeline-event::before {
+              left: 19px;
+            }
+            .timeline .timeline-event::after {
+              left: 19px;
+            }
+            .timeline .timeline-event:nth-child(even) .timeline-content {
+              margin-left: 70px;
+            }
+            .timeline .timeline-event:nth-child(odd) .timeline-content {
+              text-align: auto; 
+              margin-left: 70px;
+            }
+            .timeline .timeline-badge {
+              left: 0;
+            }
+
+            .timeline .timeline-event:nth-child(even) .timeline-content .timeline-content-card{
+              margin-left: 0px;
+            }
+
+            .timeline .timeline-event:nth-child(odd) .timeline-content .timeline-content-card{
+              margin-right:0px;
+            }
+          }
+
+        </style>
+    </template>
+</dom-module>
+
+<script>
+
+    class MaterialTimelineStyleElement extends Polymer.Element {        
+        
+        static get is() { return "material-timeline-style"; }
+
+        ready(){
+            super.ready();
+        }     
+    }
+
+    customElements.define(MaterialTimelineStyleElement.is, MaterialTimelineStyleElement);
+
+</script>

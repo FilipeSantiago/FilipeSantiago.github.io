@@ -1,0 +1,78 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/maps-icons.html">
+<link rel="import" href="../bower_components/paper-divider/paper-divider.html">
+<link rel="import" href="material-timeline-style.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+<dom-module id="material-timeline">    
+    <template>
+        <style include="material-timeline-style"></style>
+        
+        <div class="container">
+            <div class="timeline">
+                <template is="dom-repeat" items="{{events}}" as="event">
+                    <div class="timeline-event">
+                        <div class="timeline-content">
+                            <div class="timeline-content-card">
+                                <paper-card animated image="" alt="Emmental">
+                                    <div class="card-content">
+                                        <div class="event-header"> 
+                                        <div class="timeline-header-badge">
+                                            <i><iron-icon icon="maps:directions-bus"></iron-icon></i>
+                                        </div>
+                                            {{event.Header}}
+                                            <span class="event-header-detail">{{event.HeaderDetail}}</span> 
+                                        </div>
+                                        <div class="event-sub-header"> {{event.SubHeader}} </div>
+                                        <paper-divider></paper-divider> 
+                                        <div class="event-content">                                            
+                                            {{event.Content}}
+                                        </div>
+                                    </div>
+                                    <div class="card-actions">
+                                        <paper-button>Share</paper-button>
+                                        <paper-button>Explore!</paper-button>
+                                    </div>
+                                </paper-card>
+                            </div>
+                        </div>
+                    <div class="timeline-badge"><i><iron-icon icon="maps:directions-bus"></iron-icon></i></div>
+                </div>
+                </template>
+            </div>
+        </div>    
+
+    </template>
+</dom-module>
+
+<script>
+
+    class MaterialTimelineElement extends Polymer.Element {        
+        
+        static get is() { return "material-timeline"; }
+
+        ready(){
+            super.ready();
+        }     
+
+        static get properties(){
+            return{
+                events:{
+                    type:Array,
+                },
+                staticOpen:{
+                    type:Boolean,
+                    value: false
+                },
+                _toogleClass:{
+                    type:String,
+                    value: ""
+                }                
+            };
+        }
+    }
+
+    customElements.define(MaterialTimelineElement.is, MaterialTimelineElement);
+
+</script>
