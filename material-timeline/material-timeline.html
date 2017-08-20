@@ -3,41 +3,48 @@
 <link rel="import" href="../bower_components/iron-icons/maps-icons.html">
 <link rel="import" href="../bower_components/paper-divider/paper-divider.html">
 <link rel="import" href="material-timeline-style.html">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
 
 <dom-module id="material-timeline">    
+    <link rel="import" type="css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
     <template>
         <style include="material-timeline-style"></style>
-        
+
         <div class="container">
             <div class="timeline">
-                <template is="dom-repeat" items="{{events}}" as="event">
-                    <div class="timeline-event">
+                <template is="dom-repeat" items="{{events}}" as="event" index-as="event_no">
+                    <div class="timeline-event" style$="{{getTranslateYValue(event_no)}}">
                         <div class="timeline-content">
                             <div class="timeline-content-card">
                                 <paper-card animated image="" alt="Emmental">
                                     <div class="card-content">
+                                        <div class="centrilize-icon timeline-header-badge">
+                                                <i id="header-badge" class$="fa fa-{{event.HeaderIcon}} fa-2x"></i>                                           
+                                        </div>
                                         <div class="event-header"> 
-                                        <div class="timeline-header-badge">
-                                            <i><iron-icon icon="maps:directions-bus"></iron-icon></i>
+                                            {{event.Header}}                                            
                                         </div>
-                                            {{event.Header}}
-                                            <span class="event-header-detail">{{event.HeaderDetail}}</span> 
-                                        </div>
-                                        <div class="event-sub-header"> {{event.SubHeader}} </div>
-                                        <paper-divider></paper-divider> 
+                                        <template is="dom-repeat" items="{{event.SubHeaders}}" as="subHeader" index-as="report_no">
+                                                <div class="event-sub-header"> 
+                                                    <i class$="fa fa-{{subHeader.Icon}}"></i>
+                                                    {{subHeader.Text}} 
+                                                </div>
+                                        </template>
+                                            <paper-divider></paper-divider> 
                                         <div class="event-content">                                            
                                             {{event.Content}}
                                         </div>
                                     </div>
-                                    <div class="card-actions">
-                                        <paper-button>Share</paper-button>
-                                        <paper-button>Explore!</paper-button>
+                                    <div class="card-actions" align="right">
+                                        <paper-button>Mais Informações</paper-button>
                                     </div>
                                 </paper-card>
                             </div>
                         </div>
-                    <div class="timeline-badge"><i><iron-icon icon="maps:directions-bus"></iron-icon></i></div>
+                    <div class="timeline-badge centrilize-icon">
+                        <i id="badge" class$="fa fa-{{event.HeaderIcon}} fa-2x"></i>                                           
+                    </div>
                 </div>
                 </template>
             </div>
@@ -70,6 +77,11 @@
                     value: ""
                 }                
             };
+        }
+
+        getTranslateYValue(position){
+            var finalPos =  position * -35;
+            return "transform: translateY("+ finalPos + "%);"
         }
     }
 
