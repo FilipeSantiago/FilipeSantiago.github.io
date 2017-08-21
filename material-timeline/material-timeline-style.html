@@ -5,19 +5,17 @@
   <template>
         <style>
           .timeline {
-            transform: translateY(-7%);
+            /*transform: translateY(-7%);*/
             position: relative;
           }
-
           .timeline .timeline-event {
             position: relative;
             padding-top: 5px;
             padding-bottom: 5px;            
           }
-
           .timeline .timeline-event .timeline-content {
             position: relative;
-            transform: translateY(35%);
+            /*transform: translateY(35%);*/
             width: calc(50%);
           }           
           
@@ -31,20 +29,17 @@
             opacity: 0.4;
             top: calc(50%);
           }
-
           .timeline .timeline-event:nth-child(even)::before {
             left: calc(50% - 2px);
           }
-
           .timeline .timeline-event:nth-child(odd)::before {
             left: calc(50% - 52px);
           }
-
           .timeline .timeline-event::after {
             display: block;
             content: "";
             width: 4px;
-            height: calc(65%);
+            height: calc(100%);
             position: absolute;
             background: #038175;
             opacity: 0.4;
@@ -53,39 +48,31 @@
             margin-top: 8px;
             z-index: -1;
           }
-
           .timeline .timeline-event:nth-last-child(2)::after {
             display: none;
           }
-
           .timeline .timeline-event:nth-child(even) .timeline-content {
             margin-right:auto;
             margin-left: calc(50%);
           }
-
           .timeline .timeline-event:nth-child(odd) .timeline-content {
             text-align: right;  
             margin-right:calc(50%);
           }
-
           .timeline .timeline-event:nth-child(even) .timeline-content .timeline-content-card{
             margin-left: 50px;
           }
-
           .timeline .timeline-event:nth-child(odd) .timeline-content .timeline-content-card{
             margin-right:50px;
           }
-
           paper-card{
             width: 100%;
           }
-
           .centrilize-icon{
             display:flex;
             justify-content:center;
             align-items:center;
           }
-
           .timeline .timeline-badge {
             position: absolute;
             width: 50px;
@@ -97,7 +84,6 @@
             border-radius: 50%;
             cursor: default;
           }
-
           .timeline-header-badge{
             display: none;
             margin-left: auto;
@@ -116,7 +102,6 @@
             text-align: left;
             font-size: 18px;
           }
-
           .event-header-detail{
             font-size: 13px;
           }
@@ -126,17 +111,14 @@
             font-size: 14px;
             color: #616161;
           }
-
           .event-content{
             text-align: left;
           }          
-
           @media (max-width: 770px) {
                        
             .timeline{
               transform: translateY(0%);
             }
-
             .timeline .timeline-event::after {
               display: block;
               content: "";
@@ -150,14 +132,12 @@
               margin-top: 8px;
               z-index: -1;
             }
-
             .timeline .timeline-event{  
               transform: translateY(0%) !important;
               display:flex;
               justify-content:center;
               align-items:center;
             }
-
             .timeline .timeline-event:nth-child(even) .timeline-content {
               transform: translateY(0%) !important;
               margin: 0px;
@@ -171,19 +151,15 @@
             .timeline .timeline-badge {
               display: none;
             }
-
             .timeline .timeline-event:nth-child(even) .timeline-content .timeline-content-card{
               margin: 0px;
             }
-
             .timeline .timeline-event:nth-child(odd) .timeline-content .timeline-content-card{
               margin:0px;
             }
-
             .timeline-header-badge{
               display: flex;
             } 
-
             paper-card{
               width: 100%;
             }           
@@ -193,16 +169,12 @@
 </dom-module>
 
 <script>
-
     class MaterialTimelineStyleElement extends Polymer.Element {        
         
         static get is() { return "material-timeline-style"; }
-
         ready(){
             super.ready();
         }     
     }
-
     customElements.define(MaterialTimelineStyleElement.is, MaterialTimelineStyleElement);
-
 </script>

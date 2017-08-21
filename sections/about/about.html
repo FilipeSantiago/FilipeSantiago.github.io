@@ -1,0 +1,64 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="about-section">    
+    <template>
+        
+        <custom-style>
+            <style is="custom-style">
+
+            .about-card{
+                width: 100%;
+            }
+            
+            .card-content{
+                padding: 2%;
+            }
+
+            .card-actions{
+                padding: 1%;
+            }
+
+            .flex-center-align {
+                    @apply --layout-horizontal;
+                    @apply --layout-center-justified;
+                  }
+            </style>
+        </custom-style>
+
+        <paper-card class="about-card">
+            <div class="card-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis placerat pellentesque. Sed suscipit ultricies felis, 
+                at porttitor justo mattis in. Mauris volutpat, turpis ac dapibus efficitur, turpis orci rhoncus enim, ut malesuada lorem velit eu quam. 
+                Vivamus vitae mi turpis. Vestibulum lobortis quam dui, sit amet varius libero venenatis sit amet. Integer id libero libero. Etiam volutpat 
+                risus eu ante porttitor ornare. Phasellus dictum eleifend nulla, at sagittis sem. Suspendisse lorem felis, vestibulum non nisi et, semper 
+                facilisis turpis. Duis id commodo lacus, quis auctor leo. Fusce pharetra scelerisque volutpat. Cras sagittis pharetra rutrum. Phasellus mattis 
+                commodo nisi, nec placerat orci vehicula nec. Sed finibus mi non arcu vehicula maximus. Mauris congue quis neque faucibus semper.
+            </div>
+            <div class="card-actions">
+                <div class="flex-center-align">
+                    <paper-button raised>Dowload Curriculum</paper-button>
+                    <paper-button raised>Entre em Contato</paper-button>
+                </div>
+            </div>
+        </paper-card>
+
+    </template>
+</dom-module>
+
+<script>
+
+    class AboutElement extends Polymer.Element {        
+        
+        static get is() { return "about-section"; }
+
+        ready(){
+            super.ready();
+        }     
+
+    }
+
+    customElements.define(AboutElement.is, AboutElement);
+
+</script>

@@ -1,0 +1,24 @@
+{
+  "name": "FilipeSantiago.github.io",
+  "homepage": "https://github.com/FilipeSantiago/FilipeSantiago.github.io",
+  "authors": [
+    "Filipe Santiago <filipe_santiago@id.uff.br>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-icons": "PolymerElements/iron-icons#^2.0.1",
+    "paper-card": "PolymerElements/paper-card#^2.0.0",
+    "paper-divider": "WebPaperElements/paper-divider#^1.0.0",
+    "polymer": "Polymer/polymer#^2.0.2",
+    "paper-button": "PolymerElements/paper-button#^2.0.0"
+  }
+}

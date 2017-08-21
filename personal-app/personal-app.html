@@ -1,0 +1,97 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<dom-module id="personal-app">    
+    <template>
+        <custom-style>
+            <style include="iron-flex">
+                .header{
+                    box-sizing: border-box;
+                    display: block;
+                }
+
+                .header-background {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 370px;
+                    background: url(../assets/img/cover.jpg) no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    background-attachment: fixed;
+                }
+
+
+                .container{
+                    margin-top: -13%
+                }
+
+                .flex-center-align {
+                    @apply --layout-horizontal;
+                    @apply --layout-center-justified;
+                  }
+
+                @media (max-width: 700px) {
+                    .sections {
+                        width: 95%;
+                    }
+                }
+
+                @media (min-width: 992px){
+                    .sections {
+                        width: 75%;
+                    }
+                }
+
+                @media (min-width: 1200px){      
+                    .sections {
+                        width: 50%;
+                    }
+                }
+            </style>
+        </custom-style>
+
+        <div class="header"> 
+            <div class="header-background"></div>
+        </div>
+        <div class="container flex-center-align">
+            <div class="sections">
+                <slot class="profile-section"></slot>
+                <slot class="about-section"></slot>
+                <slot class="education-section"></slot>
+                <slot class="skills-section"></slot>
+            </div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+
+    class PersonalAppElement extends Polymer.Element {        
+        
+        static get is() { return "personal-app"; }
+
+        ready(){
+            super.ready();
+        }     
+
+        static get properties(){
+            return{
+                events:{
+                    type:Array,
+                },
+                staticOpen:{
+                    type:Boolean,
+                    value: false
+                },
+                _toogleClass:{
+                    type:String,
+                    value: ""
+                }                
+            };
+        }
+    }
+
+    customElements.define(PersonalAppElement.is, PersonalAppElement);
+
+</script>

@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../material-timeline/material-timeline.html">
+
+<dom-module id="education-section">    
+    <template>
+        
+        <material-timeline events='[{"Header": "Graduação - Ciência da Computação",
+                                    "HeaderIcon": "graduation-cap",
+                                    "SubHeaders" : [{"Icon":"", "Text": "2011 - 2016"}, 
+                                                    {"Icon":"","Text": "UFF - Universidade Federal Fluminense"}],
+                                    "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac volutpat urna. Aenean vestibulum ultrices accumsan. Proin lectus massa, tristique auctor diam non, tincidunt auctor nulla. Vestibulum lobortis est a mauris ultrices tristique. Proin mollis vestibulum pharetra. Donec commodo nisl id varius dictum. In vulputate ante eget augue dictum, sed dignissim arcu eleifend."},
+                                    {"Header": "Maratona de Computação SBC",
+                                    "HeaderIcon": "code",
+                                    "SubHeaders" : [{"Icon":"","Text": "2014"}, 
+                                                    {"Icon":"","Text": "Time Ex Nihilo"}],
+                                    "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac volutpat urna. Aenean vestibulum ultrices accumsan. Proin lectus massa, tristique auctor diam non, tincidunt auctor nulla. Vestibulum lobortis est a mauris ultrices tristique. Proin mollis vestibulum pharetra. Donec commodo nisl id varius dictum. In vulputate ante eget augue dictum, sed dignissim arcu eleifend."},
+                                    {"Header": "Maratona de Computação SBC",
+                                    "HeaderIcon": "code",
+                                    "SubHeaders" : [{"Icon":"","Text":"2015 e 2016"}, 
+                                                    {"Icon":"","Text":"Time 11 men and 1 code"}],
+                                    "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac volutpat urna. Aenean vestibulum ultrices accumsan. Proin lectus massa, tristique auctor diam non, tincidunt auctor nulla. Vestibulum lobortis est a mauris ultrices tristique. Proin mollis vestibulum pharetra. Donec commodo nisl id varius dictum. In vulputate ante eget augue dictum, sed dignissim arcu eleifend."},
+                                    {"Header": "Mestrado - Ciência da Computação",
+                                    "HeaderIcon": "graduation-cap",
+                                    "SubHeaders" : [{"Icon":"", "Text": "2016 - atualmente"}, 
+                                                    {"Icon":"", "Text": "UFF - Universidade Federal Fluminense"}],
+                                    "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac volutpat urna. Aenean vestibulum ultrices accumsan. Proin lectus massa, tristique auctor diam non, tincidunt auctor nulla. Vestibulum lobortis est a mauris ultrices tristique. Proin mollis vestibulum pharetra. Donec commodo nisl id varius dictum. In vulputate ante eget augue dictum, sed dignissim arcu eleifend."}]  '>
+        </material-timeline>
+
+    </template>
+</dom-module>
+
+<script>
+
+    class EducationalElement extends Polymer.Element {        
+        
+        static get is() { return "education-section"; }
+
+        ready(){
+            super.ready();
+        }     
+
+    }
+
+    customElements.define(EducationalElement.is, EducationalElement);
+
+</script>

@@ -2,12 +2,13 @@
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../bower_components/iron-icons/maps-icons.html">
 <link rel="import" href="../bower_components/paper-divider/paper-divider.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
 <link rel="import" href="material-timeline-style.html">
 
 
 <dom-module id="material-timeline">    
     <link rel="import" type="css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
-
+    
     <template>
         <style include="material-timeline-style"></style>
 
@@ -81,7 +82,8 @@
 
         getTranslateYValue(position){
             var finalPos =  position * -35;
-            return "transform: translateY("+ finalPos + "%);"
+            //return "transform: translateY("+ finalPos + "%);"
+            return "";
         }
     }
 

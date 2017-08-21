@@ -5,33 +5,44 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
         <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-        <link rel="import" href="bower_components/paper-card/paper-card.html">
-        <link rel="import" href="material-timeline/material-timeline.html">
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="import" href="personal-app/personal-app.html">
+        <link rel="import" href="sections/education/education.html">
+        <link rel="import" href="sections/profile/profile.html">
+        <link rel="import" href="sections/about/about.html">
+        <style>
+            body{
+                margin: 0px;
+                font-family: 'Raleway', sans-serif;
+                background-color: #f5f5f5 !important;
+            }
+
+            .margin-top{
+                margin-top: 5%;
+            }
+        </style>
     </head>
     <body>
-
-    <material-timeline events='[{"Header": "Graduação - Ciência da Computação",
-                                 "HeaderIcon": "graduation-cap",
-                                 "SubHeaders" : [{"Icon":"", "Text": "2011 - 2016"}, 
-                                                 {"Icon":"","Text": "UFF - Universidade Federal Fluminense"}],
-                                 "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac volutpat urna. Aenean vestibulum ultrices accumsan. Proin lectus massa, tristique auctor diam non, tincidunt auctor nulla. Vestibulum lobortis est a mauris ultrices tristique. Proin mollis vestibulum pharetra. Donec commodo nisl id varius dictum. In vulputate ante eget augue dictum, sed dignissim arcu eleifend."},
-                                {"Header": "Maratona de Computação SBC",
-                                 "HeaderIcon": "code",
-                                 "SubHeaders" : [{"Icon":"","Text": "2014"}, 
-                                                 {"Icon":"","Text": "Time Ex Nihilo"}],
-                                 "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac volutpat urna. Aenean vestibulum ultrices accumsan. Proin lectus massa, tristique auctor diam non, tincidunt auctor nulla. Vestibulum lobortis est a mauris ultrices tristique. Proin mollis vestibulum pharetra. Donec commodo nisl id varius dictum. In vulputate ante eget augue dictum, sed dignissim arcu eleifend."},
-                                {"Header": "Maratona de Computação SBC",
-                                 "HeaderIcon": "code",
-                                 "SubHeaders" : [{"Icon":"","Text":"2015 e 2016"}, 
-                                                 {"Icon":"","Text":"Time 11 men and 1 code"}],
-                                 "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac volutpat urna. Aenean vestibulum ultrices accumsan. Proin lectus massa, tristique auctor diam non, tincidunt auctor nulla. Vestibulum lobortis est a mauris ultrices tristique. Proin mollis vestibulum pharetra. Donec commodo nisl id varius dictum. In vulputate ante eget augue dictum, sed dignissim arcu eleifend."},
-                                {"Header": "Mestrado - Ciência da Computação",
-                                 "HeaderIcon": "graduation-cap",
-                                 "SubHeaders" : [{"Icon":"", "Text": "2016 - atualmente"}, 
-                                                 {"Icon":"", "Text": "UFF - Universidade Federal Fluminense"}],
-                                 "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac volutpat urna. Aenean vestibulum ultrices accumsan. Proin lectus massa, tristique auctor diam non, tincidunt auctor nulla. Vestibulum lobortis est a mauris ultrices tristique. Proin mollis vestibulum pharetra. Donec commodo nisl id varius dictum. In vulputate ante eget augue dictum, sed dignissim arcu eleifend."}]  '>
-    </material-timeline>
+    
+    <personal-app>
         
+        <div class="profile-section">
+            <profile-section></profile-section>
+        </div>
+
+        <div class="about-section">
+            <div class="margin-top">
+                <about-section></about-section>
+            </div>
+        </div>
+
+        <div class="education-section">
+            <div class="margin-top">
+                <education-section></education-section>
+            </div>
+        </div>
+
+    </personal-app>
+
     </body>
 </html>

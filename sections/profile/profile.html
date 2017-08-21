@@ -1,0 +1,136 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="profile-section">    
+    <link rel="import" type="css" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
+    <template>
+        
+        <custom-style>
+            <style is="custom-style">
+
+                paper-card{
+                    --primary-background-color: #038175;
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                }
+
+                .card-content{
+                    padding: 40px;
+                    display: flex;
+                }
+
+                .container .flex-vertical{
+                    display: flex;
+                }
+
+                .profile-header{
+                    display: block;
+                    width: 100%;
+                    font-weight: 900 !important;                    
+                    font-size: 2.30rem;
+                }
+                
+                .profile-social-media{
+                    margin-top: 11%;
+                }
+
+                .profile-contacts {
+                    margin-top: 12%;
+                }
+
+                .contact{
+                    margin-top: 3%;
+                }
+
+                .contact i{
+                    font-size: 20px;
+                    margin-right: 3px; 
+                }
+
+                .contact a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                .letter{
+                    color: #fff;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+
+                .capitalize{
+                    text-transform: capitalize;
+                }                
+
+                .flex-vertical {
+                    @apply --layout-vertical;
+                }
+                .flexchild-vertical {
+                   @apply --layout-flex;
+                }
+            </style>
+          </custom-style>
+
+          <paper-card class="profile">
+            <div class="card-content">
+                <div class="container flex-vertical">
+
+                    <div>
+                        <span class="profile-header letter capitalize">Filipe Santiago</span>
+                        <div class="profile-sub-header">
+                            <span class="letter capitalize">Cientistas de Dados & Desenvolvedor</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="profile-contacts letter">
+                            <div class="contact">
+                                <i class="fa fa-envelope"></i>
+                                <span>ftsantiago95@gmail.com</span>
+                            </div> 
+                            <div class="contact">
+                                <i class="fa fa-globe"></i>
+                                <a href="http://filipesantiago.github.io/" >filipesantiago.github.io/</a>
+                            </div>
+                            <div class="contact">
+                                <i class="fa fa-phone"></i>
+                                <span>(21) 98005-9138</span>
+                            </div>
+                            <div class="contact">
+                                <i class="fa fa-map-marker"></i>
+                                <span>Rua Mem de Sá, Niterói, Brasil</span>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="profile-social-media">
+                            <paper-button raised class="indigo"><i class="fa fa-facebook"></i></paper-button>
+                            <paper-button raised><i class="fa fa-google-plus"></i></paper-button>
+                            <paper-button raised><i class="fa fa-linkedin"></i></paper-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rate-image"></div>
+          </paper-card>
+
+    </template>
+</dom-module>
+
+<script>
+
+    class ProfileElement extends Polymer.Element {        
+        
+        static get is() { return "profile-section"; }
+
+        ready(){
+            super.ready();
+        }     
+
+    }
+
+    customElements.define(ProfileElement.is, ProfileElement);
+
+</script>
