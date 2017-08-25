@@ -1,0 +1,241 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-progress/paper-progress.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/paper-styles/color.html">
+<dom-module id="skills-section">    
+    <template>
+        <style include="iron-flex">
+            .skills{
+                height: auto;
+                width: 100%;
+                background-color: var(--paper-cyan-600);
+                padding-bottom: 5%;
+            }
+
+            .flex-3 {
+                @apply --layout-flex-3;
+            }
+
+            .flex-6 {
+                @apply --layout-flex-6;
+            }
+
+            .centralize {
+                @apply --layout-horizontal;
+                @apply --layout-center-justified;
+            }
+            
+            .header{
+                margin-top: 20%;
+                margin-bottom: 10%;
+            }
+
+            .skill-progress{
+                padding: 5%;
+            }
+
+            .skill-name{
+                @apply --layout-horizontal;
+                @apply --layout-start-justified;
+            }
+
+            .percentage{
+                @apply --layout-horizontal;
+                @apply --layout-end-justified;;
+            }
+
+            paper-progress{
+                width: 100%;
+            }
+
+            paper-progress.white {
+                --paper-progress-active-color: var(--paper-grey-50);
+                --paper-progress-container-color: var(--paper-cyan-800);
+                --paper-progress-secondary-color: var(--paper-teal-500);
+            }
+
+        </style>
+
+        <paper-card class="skills">
+            <div class="layout horizontal">
+                <div class="flex-3">
+                    <div>
+                        <div class="header centralize">
+                            <div>Profissional</div>
+                        </div>                       
+                        <div class="progress-bars">
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>90%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="90" class="white"></paper-progress>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>75%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="75" class="white"></paper-progress>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>60%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="60" class="white"></paper-progress>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>80%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="80" class="white"></paper-progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-3">
+                    <div>
+                        <div class="header centralize">
+                            <div>Pessoal</div>
+                        </div>                       
+                        <div class="progress-bars">
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>75%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="75" class="white"></paper-progress>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>63%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="63" class="white"></paper-progress>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>80%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="80" class="white"></paper-progress>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>45%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="45" class="white"></paper-progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-3">
+                    <div>
+                        <div class="header centralize">
+                            <div>Software</div>
+                        </div>                       
+                        <div class="progress-bars">
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>81%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="81" class="white"></paper-progress>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>73%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="73" class="white"></paper-progress>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>50%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="50" class="white"></paper-progress>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="layout horizontal">
+                                    <div class="flex-6 skill-name">                                    
+                                        <span>teste</span>
+                                    </div>
+                                    <div class="flex-6 percentage">                                    
+                                        <span>99%</span>
+                                    </div>
+                                </div>
+                                <paper-progress value="99" class="white"></paper-progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </paper-card>
+    </template>
+</dom-module>
+
+<script>
+
+    class SkillsElement extends Polymer.Element {        
+        
+        static get is() { return "skills-section"; }
+
+        ready(){
+            super.ready();
+        }     
+
+    }
+
+    customElements.define(SkillsElement.is, SkillsElement);
+
+</script>

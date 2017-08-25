@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="footer-section">    
+    <template>
+        <style include="iron-flex">
+
+            .centralize {
+                @apply --layout-horizontal;
+                @apply --layout-center-justified;
+                padding: 1%;
+            }
+            
+        </style>
+
+
+        <div class="centralize">
+            <div>
+                <span>{{getCurrentYear()}} © Filipe Santiago </span>
+            </div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+
+    class FooterElement extends Polymer.Element {        
+        
+        static get is() { return "footer-section"; }
+
+        ready(){
+            super.ready();
+        }     
+
+        getCurrentYear(){
+            return "2017"
+        }
+
+    }
+
+    customElements.define(FooterElement.is, FooterElement);
+
+</script>

@@ -21,9 +21,14 @@
             }
 
             .flex-center-align {
-                    @apply --layout-horizontal;
-                    @apply --layout-center-justified;
-                  }
+                @apply --layout-horizontal;
+                @apply --layout-center-justified;
+            }
+
+            paper-button.cyan{
+                background: var(--paper-cyan-600);
+                color: white;
+            }
             </style>
         </custom-style>
 
@@ -38,8 +43,8 @@
             </div>
             <div class="card-actions">
                 <div class="flex-center-align">
-                    <paper-button raised>Dowload Curriculum</paper-button>
-                    <paper-button raised>Entre em Contato</paper-button>
+                    <paper-button class="cyan" raised>Dowload Curriculum</paper-button>
+                    <paper-button class="cyan" raised>Entre em Contato</paper-button>
                 </div>
             </div>
         </paper-card>
