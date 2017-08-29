@@ -1,0 +1,88 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="likes-section">    
+    <link rel="import" type="css" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
+    <template>        
+        <custom-style>
+            <style is="custom-style" include="iron-flex">
+
+            .about-card{
+                width: 100%;
+            }
+            
+            .card-content{
+                padding: 2%;
+            }
+
+            .flex-center-align {
+                @apply --layout-horizontal;
+                @apply --layout-center-justified;
+            }
+
+            .flex-2 {
+                @apply --layout-flex-6;
+            }
+
+            .t-icon{
+                padding-top: 2%;
+                padding-bottom: 3%;
+            }
+
+            paper-button.cyan{
+                background: var(--paper-cyan-600);
+                color: white;
+            }
+
+            .t-icon:nth-child(even){
+                background-color: var(--paper-cyan-600);
+                color: white;
+            }
+
+            .t-icon:nth-child(odd){
+                color: var(--paper-cyan-600);
+            }
+
+            .taste-icons{
+                border-top: 1px solid var(--paper-cyan-600);
+            }
+
+            </style>
+        </custom-style>
+
+        <paper-card class="about-card">
+            <div class="card-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis placerat pellentesque. Sed suscipit ultricies felis, 
+                at porttitor justo mattis in. Mauris volutpat, turpis ac dapibus efficitur, turpis orci rhoncus enim, ut malesuada lorem velit eu quam. 
+                Vivamus vitae mi turpis. Vestibulum lobortis quam dui, sit amet varius libero venenatis sit amet. 
+            </div>
+            <div class="layout horizontal taste-icons">
+                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-book"></i> </div>
+                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-music"></i> </div>
+                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-gamepad"></i> </div>
+                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-film"></i> </div>
+                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-coffee"></i> </div>
+                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-plane"></i> </div>
+            </div>
+        </paper-card>
+
+    </template>
+</dom-module>
+
+<script>
+
+    class LikesElement extends Polymer.Element {        
+        
+        static get is() { return "likes-section"; }
+
+        ready(){
+            super.ready();
+        }     
+
+    }
+
+    customElements.define(LikesElement.is, LikesElement);
+
+</script>

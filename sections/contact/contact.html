@@ -1,0 +1,78 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="contact-section">    
+    <template>
+        <style include="iron-flex">
+            .contact{
+                width: 100%;
+                padding-bottom: 5%;
+                 padding: 0%;
+            }
+
+            .centralize {
+                @apply --layout-horizontal;
+                @apply --layout-center-justified;
+            }
+          
+            .flex-12 {
+                @apply --layout-flex-12;
+            }
+
+            .container{
+                width: 85%;
+            }
+
+            .card-actions{
+                text-align: right;
+            }
+
+            paper-button{
+                background: var(--paper-cyan-600);
+                color: white;
+            }
+
+        </style>
+
+        <paper-card class="contact">
+            <div class="centralize">
+                <div class="container">
+                    <paper-input label="Nome">
+                    </paper-input>
+
+                    <paper-input label="Assunto">
+                    </paper-input>
+
+                    <paper-input label="Email">
+                    </paper-input>
+
+                    <paper-textarea max-rows="5" rows="5" label="Mensagem">
+                    </paper-textarea>
+                </div>   
+            </div>
+            <div class="card-actions">
+                <paper-button>Enviar</paper-button>
+            </div>
+        </paper-card>
+    </template>
+</dom-module>
+
+<script>
+
+    class ContactElement extends Polymer.Element {        
+        
+        static get is() { return "contact-section"; }
+
+        ready(){
+            super.ready();
+        }     
+
+    }
+
+    customElements.define(ContactElement.is, ContactElement);
+
+</script>
