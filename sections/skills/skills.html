@@ -3,6 +3,7 @@
 <link rel="import" href="../../bower_components/paper-progress/paper-progress.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../../bower_components/paper-styles/color.html">
+
 <dom-module id="skills-section">    
     <template>
         <style include="iron-flex">
@@ -21,11 +22,6 @@
                 @apply --layout-flex-6;
             }
 
-            .centralize {
-                @apply --layout-horizontal;
-                @apply --layout-center-justified;
-            }
-            
             .header{
                 margin-top: 20%;
                 margin-bottom: 10%;
@@ -35,6 +31,11 @@
                 padding: 5%;
             }
 
+            .centralize {
+                @apply --layout-horizontal;
+                @apply --layout-center-justified;
+            }
+
             .skill-name{
                 @apply --layout-horizontal;
                 @apply --layout-start-justified;
@@ -42,7 +43,7 @@
 
             .percentage{
                 @apply --layout-horizontal;
-                @apply --layout-end-justified;;
+                @apply --layout-end-justified;
             }
 
             paper-progress{

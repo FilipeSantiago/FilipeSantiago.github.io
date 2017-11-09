@@ -22,8 +22,8 @@
                 @apply --layout-center-justified;
             }
 
-            .flex-2 {
-                @apply --layout-flex-6;
+            .item-flex {
+                flex: 1 1 auto;
             }
 
             .t-icon{
@@ -49,6 +49,11 @@
                 border-top: 1px solid var(--paper-cyan-600);
             }
 
+            .wrap{
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
             </style>
         </custom-style>
 
@@ -58,13 +63,13 @@
                 at porttitor justo mattis in. Mauris volutpat, turpis ac dapibus efficitur, turpis orci rhoncus enim, ut malesuada lorem velit eu quam. 
                 Vivamus vitae mi turpis. Vestibulum lobortis quam dui, sit amet varius libero venenatis sit amet. 
             </div>
-            <div class="layout horizontal taste-icons">
-                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-book"></i> </div>
-                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-music"></i> </div>
-                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-gamepad"></i> </div>
-                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-film"></i> </div>
-                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-coffee"></i> </div>
-                    <div class="flex-2 flex-center-align t-icon"> <i class="fa fa-2x fa-plane"></i> </div>
+            <div class="layout horizontal taste-icons wrap">
+                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-book"></i> </div>
+                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-music"></i> </div>
+                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-gamepad"></i> </div>
+                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-film"></i> </div>
+                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-coffee"></i> </div>
+                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-plane"></i> </div>
             </div>
         </paper-card>
 

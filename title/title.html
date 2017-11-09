@@ -1,0 +1,51 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<dom-module id="section-title">
+    <link rel="import" type="css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+        
+    <template>
+
+        <style>
+        
+        </style>
+
+        <div>
+            <div class="icon">
+                <i id="badge" class$="fa fa-{{icon}} fa-2x"></i>
+            </div>
+            <div class="title-text">
+                {{title}}
+            </div>
+        </div>
+
+    </template>
+
+</dom-module>
+
+<script>
+
+    class SkillsElement extends Polymer.Element {        
+        
+        static get is() { return "section-title"; }
+
+        ready(){
+            super.ready();
+        }     
+
+        static get properties(){
+            return {
+                icon: {
+                    type: String
+                },
+                title: {
+                    type: String
+                }
+            };
+        }
+
+    }
+
+    customElements.define(SkillsElement.is, SkillsElement);
+    
+</script>

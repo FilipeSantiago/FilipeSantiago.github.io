@@ -1,6 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../title/title.html">
 
 <dom-module id="about-section">    
     <template>
@@ -25,6 +26,21 @@
                 @apply --layout-center-justified;
             }
 
+            .citation-part{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .citation-text{
+                font-size: 20px;
+            }
+
+            .citation-person{
+                font-size: 15px;
+            }
+
             paper-button.cyan{
                 background: var(--paper-cyan-600);
                 color: white;
@@ -32,14 +48,37 @@
             </style>
         </custom-style>
 
+        <!--<div>
+            <section-title title="Sobre" icon="user"></section-title>
+        </div>-->
+
         <paper-card class="about-card">
             <div class="card-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis placerat pellentesque. Sed suscipit ultricies felis, 
-                at porttitor justo mattis in. Mauris volutpat, turpis ac dapibus efficitur, turpis orci rhoncus enim, ut malesuada lorem velit eu quam. 
-                Vivamus vitae mi turpis. Vestibulum lobortis quam dui, sit amet varius libero venenatis sit amet. Integer id libero libero. Etiam volutpat 
-                risus eu ante porttitor ornare. Phasellus dictum eleifend nulla, at sagittis sem. Suspendisse lorem felis, vestibulum non nisi et, semper 
-                facilisis turpis. Duis id commodo lacus, quis auctor leo. Fusce pharetra scelerisque volutpat. Cras sagittis pharetra rutrum. Phasellus mattis 
-                commodo nisi, nec placerat orci vehicula nec. Sed finibus mi non arcu vehicula maximus. Mauris congue quis neque faucibus semper.
+
+                <div class="description-part">
+                    
+                    <p>
+                        Olá, eu sou Filipe Santiago, me formei em ciência da computação pela Universidade Federal Fluminense (UFF),
+                        e agora estou na missão de concluir o mestrado também na UFF.
+                    </p>
+                    
+                    <p>
+                        Eu sempre gostei de jogos de puzzles, mecânicos ou virtuais, a ideia de resolver um problema, aparentemente grande, com poucas
+                        ferramentas, ou comandos, sempre me pareceu desafiadora e divertida, por isso eu me identifiquei tanto com a computação, pois seus
+                        desafios seguem este mesmo principio, e no fim temos a mesma sensação de quando completamos um grande quebra-cabeça.
+                    </p>
+                                       
+                </div>
+
+                <div class="citation-part">
+                    <div class="citation-text">
+                        “You can do anything you set your mind to.”
+                    </div>
+                    <div class="citation-person" >
+                         - Benjamin Franklin
+                    </div>
+                </div>
+
             </div>
             <div class="card-actions">
                 <div class="flex-center-align">
