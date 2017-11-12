@@ -10,12 +10,32 @@
                 padding: 1%;
             }
             
+            .references{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .icon-reference{
+                font-size: 12px;
+            }
+
+            a{
+                text-decoration: none;
+            }
         </style>
 
 
         <div class="centralize">
-            <div>
-                <span>{{getCurrentYear()}} © Filipe Santiago </span>
+            <div class="references">
+
+                <div>
+                    <span>{{getCurrentYear()}} © Filipe Santiago </span>
+                </div>
+
+                <div class="icon-reference">
+                    <span>Ícones por: <a href="https://smashicons.com/" target="_blank">Smashicons</a></span>
+                </div>
+
             </div>
         </div>
     </template>

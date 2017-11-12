@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <title>Filipe Santiago</title>
         <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="import" href="personal-app/personal-app.html">
@@ -14,11 +15,17 @@
         <link rel="import" href="sections/footer/footer.html">
         <link rel="import" href="sections/contact/contact.html">
         <link rel="import" href="sections/likes/likes.html">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+
         <style>
+
             body{
+                --paper-font-common-base_-_font-family: 'Raleway', sans-serif;
+                --citation-font-family: 'Montserrat', sans-serif;
                 margin: 0px;
-                font-family: 'Raleway', sans-serif;
                 background-color: #f5f5f5 !important;
+                font-family: 'Raleway', sans-serif;
+
             }
 
             .margin-top{
@@ -30,41 +37,41 @@
     
     <personal-app>
         
-        <div class="profile-section">
+        <div slot="profile-section">
             <profile-section></profile-section>
         </div>
 
-        <div class="about-section">
+        <div slot="about-section">
             <div class="margin-top">
                 <about-section></about-section>
             </div>
         </div>
 
-        <div class="education-section">
+        <div slot="education-section">
             <div class="margin-top">
                 <education-section></education-section>
             </div>
         </div>
 
-        <div class="skills-section">
+        <div slot="skills-section">
             <div class="margin-top">
                 <skills-section></skills-section>
             </div>
         </div>
 
-        <div class="likes-section">
+        <div slot="likes-section">
             <div class="margin-top">
                 <likes-section></likes-section>
             </div>
         </div>
 
-        <div class="contact-section">
+        <div slot="contact-section">
             <div class="margin-top">
                 <contact-section></contact-section>
             </div>
         </div>
 
-        <div class="footer-section">
+        <div slot="footer-section">
             <footer-section></footer-section>
         </div>
         

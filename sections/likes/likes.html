@@ -2,6 +2,8 @@
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../title/title.html">
+<link rel="import" href="../../title-icon/title-icon.html">
 
 <dom-module id="likes-section">    
     <link rel="import" type="css" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
@@ -60,6 +62,7 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                font-family: var(--citation-font-family)
             }
 
             .citation-text{
@@ -72,6 +75,13 @@
 
             </style>
         </custom-style>
+
+        <div>
+            <section-title title="Hobbies">
+                <title-icon slot="icon-container" icon-type="img-icon" icon="like.svg"></title-icon>
+            </section-title>
+        </div>
+
 
         <paper-card class="about-card">
             <div class="card-content">

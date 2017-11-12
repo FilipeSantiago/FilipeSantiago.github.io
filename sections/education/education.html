@@ -4,26 +4,32 @@
 <dom-module id="education-section">    
     <template>
         
-        <material-timeline events='[{"Header": "Graduação - Ciência da Computação",
-                                    "HeaderIcon": "graduation-cap",
-                                    "SubHeaders" : [{"Icon":"", "Text": "2011 - 2016"}, 
-                                                    {"Icon":"","Text": "UFF - Universidade Federal Fluminense"}],
-                                    "Content": "Na graduação fui apresentado ao mundo da computação, aqui aprendi os seus fundamentos com profissionais mundialmente reconhecidos."},
-                                    {"Header": "Maratona de Computação SBC",
-                                    "HeaderIcon": "code",
-                                    "SubHeaders" : [{"Icon":"","Text": "2014"}, 
-                                                    {"Icon":"","Text": "Time Ex Nihilo"}],
-                                    "Content": "Participei do time de maratona de computação da UFF que formalizou o interesse da mesma em criar o hábito de participar das maratonas de computação. Nesta edição meu time foi classificado para a etapa nacional."},
-                                    {"Header": "Maratona de Computação SBC",
-                                    "HeaderIcon": "code",
-                                    "SubHeaders" : [{"Icon":"","Text":"2015 e 2016"}, 
-                                                    {"Icon":"","Text":"Time 11 men and 1 code"}],
-                                    "Content": "Nos anos seguintes também participei da maratona, porém agora com outro time."},
-                                    {"Header": "Mestrado - Ciência da Computação",
-                                    "HeaderIcon": "graduation-cap",
+        <div>
+            <section-title title="Experiência">
+                <title-icon slot="icon-container" icon-type="img-icon" icon="003-layers.svg"></title-icon>
+            </section-title>
+        </div>
+
+        <material-timeline events='[{"Header": "Mestrado - Ciência da Computação", 
+                                    "HeaderIcon": "graduation-cap", 
                                     "SubHeaders" : [{"Icon":"", "Text": "2016 - atualmente"}, 
-                                                    {"Icon":"", "Text": "UFF - Universidade Federal Fluminense"}],
-                                    "Content": "No mestrado estou aprimorando um software de alto desempenho para que este possa trabalhar eficientemente com GPUs."}]  '>
+                                                    {"Icon":"", "Text": "UFF - Universidade Federal Fluminense"}], 
+                                    "Content": "No mestrado estou aprimorando um software de alto desempenho para que este possa trabalhar eficientemente com GPUs."},
+                                   {"Header": "Maratona de Computação SBC", 
+                                   "HeaderIcon": "code", 
+                                   "SubHeaders" : [{"Icon":"","Text":"2015 e 2016"}, 
+                                                   {"Icon":"","Text":"Time 11 men and 1 code"}], 
+                                   "Content": "Nos anos seguintes também participei da maratona, porém agora com outro time."},
+                                  {"Header": "Maratona de Computação SBC", 
+                                   "HeaderIcon": "code", 
+                                   "SubHeaders" : [{"Icon":"","Text": "2014"}, 
+                                                   {"Icon":"","Text": "Time Ex Nihilo"}], 
+                                   "Content": "Participei do time de maratona de computação da UFF que formalizou o interesse da mesma em criar o hábito de participar das maratonas de computação. Nesta edição meu time foi classificado para a etapa nacional."},
+                                  {"Header": "Graduação - Ciência da Computação",
+                                   "HeaderIcon": "graduation-cap",
+                                   "SubHeaders" : [{"Icon":"", "Text": "2011 - 2016"}, 
+                                                   {"Icon":"","Text": "UFF - Universidade Federal Fluminense"}],
+                                   "Content": "Na graduação fui apresentado ao mundo da computação, aqui aprendi os seus fundamentos com profissionais mundialmente reconhecidos."}]'>
         </material-timeline>
 
     </template>

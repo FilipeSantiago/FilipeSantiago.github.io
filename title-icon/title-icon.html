@@ -1,0 +1,74 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+
+<dom-module id="title-icon">
+    <link rel="import" type="css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <template>
+
+        <style>
+            .img-icon{
+                width: 36px;
+                padding: 10px;
+            }
+
+            .icon-container{
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            }
+        </style>
+
+        <div>
+            <div class="icon-container">
+                <template is="dom-if" if="{{checkIfIsImgIcon()}}">
+                    <img class="img-icon" src="{{getImgSrc()}}">
+                </template>    
+                <i class$="getIconClass()"></i>
+            </div>
+        </div>
+
+    </template>
+
+</dom-module>
+
+<script>
+
+    class TitleIconElement extends Polymer.Element {
+
+        static get is() { return "title-icon"; }
+
+        ready() {
+            super.ready();
+        }
+
+        static get properties() {
+            return {
+                iconType: {
+                    type: String
+                },
+                icon: {
+                    type: String
+                }
+            };
+        }
+
+        getIconClass(){
+            if(this.iconType === "awesome"){
+                return "fa fa-" + this.icon;
+            }
+        }
+
+        getImgSrc(){
+            if(this.iconType === "img-icon"){
+                return "assets/section-icons/" + this.icon;
+            }
+        }
+
+        checkIfIsImgIcon(){
+            return this.iconType === "img-icon";
+        }
+
+    }
+
+    customElements.define(TitleIconElement.is, TitleIconElement);
+
+</script>

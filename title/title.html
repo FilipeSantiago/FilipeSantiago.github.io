@@ -7,13 +7,26 @@
     <template>
 
         <style>
-        
+            .section-title{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 25px;
+            }
+            .title-text{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 10px;
+                font-size: 30px;
+                text-transform: uppercase;
+                color: #616161;
+                font-weight: 600;
+            }
         </style>
 
-        <div>
-            <div class="icon">
-                <i id="badge" class$="fa fa-{{icon}} fa-2x"></i>
-            </div>
+        <div class="section-title">
+            <slot name="icon-container"></slot>
             <div class="title-text">
                 {{title}}
             </div>
@@ -25,7 +38,7 @@
 
 <script>
 
-    class SkillsElement extends Polymer.Element {        
+    class TitleElement extends Polymer.Element {        
         
         static get is() { return "section-title"; }
 
@@ -46,6 +59,6 @@
 
     }
 
-    customElements.define(SkillsElement.is, SkillsElement);
+    customElements.define(TitleElement.is, TitleElement);
     
 </script>
