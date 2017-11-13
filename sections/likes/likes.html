@@ -20,49 +20,48 @@
             }
 
             .flex-center-align {
-                @apply --layout-horizontal;
-                @apply --layout-center-justified;
-            }
-
-            .item-flex {
-                flex: 1 1 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .t-icon{
-                padding-top: 2%;
-                padding-bottom: 3%;
-            }
-
-            paper-button.cyan{
-                background: var(--paper-cyan-600);
+                font-weight: 500;
+                background-color: var(--primary-color);
                 color: white;
             }
 
-            .t-icon:nth-child(even){
-                background-color: var(--paper-cyan-600);
-                color: white;
+            .t-icon:nth-child(2n + 1){
+                background-color: white;    
+                color: var(--primary-color);
             }
 
-            .t-icon:nth-child(odd){
-                color: var(--paper-cyan-600);
+            .t-icon-description{
+                padding-top: 10px;
             }
 
-            .taste-icons{
-                border-top: 1px solid var(--paper-cyan-600);
-            }
-
-            .wrap{
-                -webkit-flex-wrap: wrap;
+            .flex-icons{
+                display: flex;
                 flex-wrap: wrap;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
             }
 
+            * {
+                box-sizing: border-box;
+            }
+
+            .flex-icons > div{
+                flex: 1 1 16%;
+                height: 120px;
+                flex-direction: column;
+            }
 
             .citation-part{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-                font-family: var(--citation-font-family)
+                font-family: var(--citation-font-family);
             }
 
             .citation-text{
@@ -71,6 +70,12 @@
 
             .citation-person{
                 font-size: 15px;
+            }
+
+            @media (max-width: 700px) {
+                .flex-icons > div{
+                    flex: 1 1 50%;
+                }
             }
 
             </style>
@@ -86,18 +91,19 @@
         <paper-card class="about-card">
             <div class="card-content">
                 <p>
-                    Quanto aos meus hobbies sem dúvidas o meu preferido conhecer uma nova boa história, seja ela transmitida por um livro, filme, seriado, 
-                    desenho, jogo ou por um amigo, uma boa história nos dá novas visões de mundo, que talvez antes nem pensassemos existir. Nos motiva a 
-                    querer aprender coisas novas, sem dúvidas não há nada como ouvir uma boa história, seja ela real ou não.
+                    Quanto aos meus hobbies sem dúvidas o meu preferido conhecer uma nova história, desde um livro até uma história de um amigo, 
+                    uma boa história nos dá novas visões de mundo, que talvez antes nem pensassemos existir. Nos motiva a querer aprender coisas novas, 
+                    sem dúvidas não há nada como ouvir uma boa história, seja ela real ou não.
                 </p>
                 <p>
-                    Eu gosto muito de ouvir música, embora eu não saiba tocar nenhum instrumento, mas em breve aprenderei um e editarei essa seção. A música
-                    tem um fator estimulante íncrivel pra qualquer tipo de situação, realmente uma das maiores criações humanas.
+                    Deste meu hobby surgiram vários outros, um dos mais úteis foi a vontade de aprender outros idiomas, mas desta vez não só como uma necessidade,
+                    mas como algo divertido, o que me ajudou a não só a evoluir em um idioma específico, mas a estudar mais profundamente novas metodologias 
+                    de aprendizado.
                 </p>
                 <p>
-                    E por último, mas nunca menos importante, viajar é algo incrível, afinal de contas muito melhor que ouvir uma boa história é criar uma,
-                    e não existe situação melhor para isso que em um novo lugar, onde absolutamente tudo é novidade, seja sozinho ou com um grupo de amigos
-                    conhecer lugares e costumes novos é algo no mínimo inspirador. 
+                    Viajar também é uma atividade das quais eu mais gosto, conhecer outras culturas, outras formas de se viver, pessoas que pensam de uma forma
+                    completamente diferente da sua, é sem dúvidas uma experiência enriquecedora. Afinal com isso aprendemos a por a prova nossos conceitos mais 
+                    fundamentais e com isso de alguma forma evoluir.
                 </p>
                 <br>
                 <div class="citation-part">
@@ -109,13 +115,31 @@
                     </div>
                 </div>
             </div>
-            <div class="layout horizontal taste-icons wrap">
-                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-book"></i> </div>
-                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-music"></i> </div>
-                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-gamepad"></i> </div>
-                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-film"></i> </div>
-                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-coffee"></i> </div>
-                    <div class="item-flex flex-center-align t-icon"> <i class="fa fa-2x fa-plane"></i> </div>
+            <div class="flex-icons">
+                    <div class="flex-center-align t-icon"> 
+                        <i class="fa fa-2x fa-book"></i> 
+                        <span class="t-icon-description">Ler</span>
+                    </div>
+                    <div class="flex-center-align t-icon"> 
+                        <i class="fa fa-2x fa-music"></i> 
+                        <span class="t-icon-description">Música</span>
+                    </div>
+                    <div class="flex-center-align t-icon"> 
+                        <i class="fa fa-2x fa-gamepad"></i> 
+                        <span class="t-icon-description">Jogar</span>
+                    </div>
+                    <div class="flex-center-align t-icon"> 
+                        <i class="fa fa-2x fa-film"></i> 
+                        <span class="t-icon-description">Filmes</span>
+                    </div>
+                    <div class="flex-center-align t-icon"> 
+                        <i class="fa fa-2x fa-language"></i> 
+                        <span class="t-icon-description">Idiomas</span>
+                    </div>
+                    <div class="flex-center-align t-icon"> 
+                        <i class="fa fa-2x fa-plane"></i> 
+                        <span class="t-icon-description">Viajar</span>
+                    </div>
             </div>
         </paper-card>
 

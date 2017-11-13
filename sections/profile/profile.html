@@ -1,6 +1,8 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 
 <dom-module id="profile-section">    
     <link rel="import" type="css" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
@@ -10,7 +12,7 @@
             <style is="custom-style">
 
                 paper-card{
-                    --primary-background-color: var(--paper-cyan-600);
+                    --primary-background-color: var(--primary-color);
                     height: auto;
                     width: 100%;
                     display: flex;
@@ -19,6 +21,7 @@
 
                 .card-content{
                     padding: 40px;
+                    width: 70%;
                     display: flex;
                 }
 
@@ -26,11 +29,15 @@
                     display: flex;
                 }
 
+                .profile-info{
+                    margin-top: 25px;
+                }
+
                 .profile-header{
                     display: block;
                     width: 100%;
                     font-weight: 900 !important;                    
-                    font-size: 2.30rem;
+                    font-size: 2rem;
                 }
                 
                 .profile-social-media{
@@ -70,12 +77,28 @@
                 .flexchild-vertical {
                    @apply --layout-flex;
                 }
+                .rate-image{
+                    width: 30%;
+                    background-color: white;
+                    z-index: 1;
+                    border-style: solid;
+                    border-width: 400px 0 0 125px;
+                    border-color: rgba(223, 50, 50, 0) transparent transparent var(--primary-color);
+                }
+                .social-icons{
+                    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+                    border-radius: 50%;
+                    padding: 0;
+                    margin: 0 13px 0 0;
+                    width: 30px;
+                    height: 30px;
+                }
             </style>
           </custom-style>
 
           <paper-card class="profile">
             <div class="card-content">
-                <div class="container flex-vertical">
+                <div class="profile-info container flex-vertical">
 
                     <div>
                         <span class="profile-header letter capitalize">Filipe Santiago</span>
@@ -95,7 +118,7 @@
                                 <a href="http://filipesantiago.github.io/" >filipesantiago.github.io/</a>
                             </div>
                             <div class="contact">
-                                <i class="fa fa-phone"></i>
+                                <i class="fa fa-whatsapp"></i>
                                 <span>(21) 98005-9138</span>
                             </div>
                             <div class="contact">
@@ -107,9 +130,14 @@
 
                     <div>
                         <div class="profile-social-media">
-                            <paper-button raised class="indigo"><i class="fa fa-facebook"></i></paper-button>
-                            <paper-button raised><i class="fa fa-google-plus"></i></paper-button>
-                            <paper-button raised><i class="fa fa-linkedin"></i></paper-button>
+                            <a href="https://www.facebook.com/filipe.santiago.737" target="_blank">
+                                <paper-icon-button class="social-icons" src="assets/section-icons/005-facebook.svg"></paper-icon-button>
+                            </a>
+                            <a href="https://www.linkedin.com/in/filipe-santiago-658757a6/" target="_blank">
+                                <paper-icon-button class="social-icons" src="assets/section-icons/002-linkedin.svg"></paper-icon-button>
+                            </a>
+                            <paper-icon-button class="social-icons" src="assets/section-icons/004-twitter.svg"></paper-icon-button>
+                            <paper-icon-button class="social-icons" src="assets/section-icons/001-google-plus.svg"></paper-icon-button>
                         </div>
                     </div>
                 </div>
