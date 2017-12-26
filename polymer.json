@@ -1,0 +1,38 @@
+{
+    "entrypoint": "index.html",
+    "shell": "personal-app/personal-app.html",
+    "fragments": [
+        "sections/about/about.html",
+        "sections/contact/contact.html",
+        "sections/education/education.html",
+        "sections/footer/footer.html",
+        "sections/likes/likes.html",
+        "sections/profile/profile.html",
+        "sections/skills/skills.html",
+        "title/title.html",
+        "title-icon/title-icon.html",
+        "material-timeline/material-timeline.html",
+        "material-timeline/material-timeline-style.html"        
+    ],
+    "sources": [
+        "elements/**/*",
+        "bower.json"
+    ],
+    "extraDependencies": [
+        "bower_components/webcomponentsjs/webcomponents-lite.js"
+    ],
+    "builds": [
+        {
+            "bundle": true,
+            "js": {
+                "minify": true
+            },
+            "css": {
+                "minify": true
+            },
+            "html": {
+                "minify": true
+            }
+        }
+    ]
+}
