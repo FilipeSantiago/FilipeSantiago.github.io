@@ -1,0 +1,58 @@
+[
+    {
+        "type": "Profile",
+        "description": "I have a bachelor's and master's degree from UFF, Brazil. I worked directly with data science for three years, and I had the opportunity to work with big companies, such as Ipiranga and Petrobras. <br /><br /> Before starting my data science journey, I have worked with web development for four years. Because of that, I'm very concerned about how the other teams will use my work. So I try to deliver something easier to use, improving the integration between the machine learning model and its application in the project."
+    },
+    {
+        "type": "EmploymentHistory",
+        "items": [
+            {
+                "id": 1,
+                "title": "Exacta - Puc rio",
+                "location": "Rio de Janeiro, Brazil",
+                "duration": "December 2019 - present",
+                "highlights": [
+                    "To support Petrobras's long-time strategy to inland freights, I collaborated on the freight prediction model's development.",
+                    "To support Petrobras with warehouse sizing, I collaborated on the data analysis of the entire process of multiple materials to help the simulator model development."
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Muxi",
+                "location": "Rio de Janeiro, Brazil",
+                "duration": "August 2018 - November 2019",
+                "highlights": [
+                    "To reduce the response time of the Ipiranga promotional gateway support team, I developed a website based on the daily logs so the team could use more sophisticated search and visualization tools.",
+                    "To reduce the response time of the Ipiranga infra team, I developed an alert to any inconsistency on the payment flow, so our infra could be more proactive in solving problems."
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Eduapp",
+                "location": "Rio de Janeiro, Brazil",
+                "duration": "April 2015 - August 2018",
+                "highlights": [
+                    "I collaborated on a school management website development in which a school could manage itself financially and academically.",
+                    "I collaborated on a panel development to help schools analyze their students' performance by class and discipline."
+                ]
+            }
+        ]
+    },
+    {
+        "type": "Education",
+        "items": [
+            {
+                "id": 4,
+                "title": "M.S. in Computer Science",
+                "location": "UFF, Rio de Janeiro, Brazil",
+                "duration": "March 2019"
+            },
+            {
+                "id": 5,
+                "title": "B.S. in Computer Science",
+                "location": "UFF, Rio de Janeiro, Brazil",
+                "duration": "March 2016"
+            }
+        ]
+    }
+]

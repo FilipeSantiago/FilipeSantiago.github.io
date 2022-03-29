@@ -18,7 +18,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@crc_types/*": ["./src/serverHandler/models/*"],
+      "@crc_services/*": ["./src/serverHandler/service/*"],
+      "@curriculum/*": ["./src/*"],
+    }
   },
   "include": [
     "src"

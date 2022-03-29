@@ -1,0 +1,9 @@
+@media print {
+    html, body {
+      height: initial !important;
+      width: "95%" !important;
+      padding-right: "30px";
+      margin-right: "30px";
+      -webkit-print-color-adjust: exact;
+    }
+}

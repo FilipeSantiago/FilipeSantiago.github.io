@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Data Analysis",
+        "level": "5",
+        "type": "technical"
+    },
+    {
+        "name": "Machine Learning",
+        "level": "5",
+        "type": "technical"
+    },
+    {
+        "name": "Deep Learning",
+        "level": "4",
+        "type": "technical"
+    },
+    {
+        "name": "Web Development",
+        "level": "5",
+        "type": "technical"
+    },
+    {
+        "name": "Python",
+        "level": "5",
+        "type": "technical"
+    },
+    {
+        "name": "SQL",
+        "level": "5",
+        "type": "technical"
+    },
+    {
+        "name": "Javascript",
+        "level": "4",
+        "type": "technical"
+    },
+    {
+        "name": "AWS (Serverless)",
+        "level": "4",
+        "type": "technical"
+    }
+]
