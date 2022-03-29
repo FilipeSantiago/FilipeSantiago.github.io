@@ -43,7 +43,7 @@ const Main = () => {
                 <Divider />
                 <DialogActions>
                     <Button variant='contained' onClick={handlePrint}>
-                        {"printCurriculum"}
+                        {t("printCurriculum")}
                     </Button>
                 </DialogActions>
             </Dialog>
@@ -65,7 +65,7 @@ const Main = () => {
                                 <Grid item container justifyContent={"center"} sx={{ "padding": "15px" }}>
                                     <Hidden only={["xs", "sm"]}>
                                         <Button variant="outlined" onClick={() => setCurriculumOpen(true)}>
-                                            {t("printCurriculum")}
+                                            {t("viewCurriculum")}
                                         </Button>
                                     </Hidden>
                                 </Grid>

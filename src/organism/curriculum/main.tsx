@@ -20,7 +20,7 @@ function Main() {
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
-        <Grid container spacing={5}>
+        <Grid container spacing={4}>
             <Grid item container justifyContent={"center"}>
                 <Grid item xs={4}>
                 </Grid>
