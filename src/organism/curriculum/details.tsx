@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, Link } from '@mui/material';
 import { Details as DetailsModel } from "@crc_services/curriculumService"
 
 type Propreties = {
@@ -15,9 +15,17 @@ const DetailsSection = (section: DetailsModel) => (
         <Grid container direction="column" >
             {section.items?.map(item => (
                 <Grid container item justifyContent="center" sx={{ "marginTop": "4px" }}>
-                    <Typography>
-                        {item.title}
-                    </Typography>
+                    {
+                        item.link == null ?
+                        <Typography>
+                                {item.title}
+                        </Typography>:
+                        <Link href={item.link} underline="always" color="#000">
+                            <Typography>
+                                {item.title}
+                            </Typography>
+                        </Link>
+                    }
                 </Grid>
             ))}
         </Grid>

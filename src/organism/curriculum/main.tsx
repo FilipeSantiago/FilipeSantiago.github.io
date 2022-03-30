@@ -42,7 +42,7 @@ function Main() {
             <Grid item container>
                 <Grid item xs={4}>
                     <Details details={details} />
-                </Grid>
+                </Grid> 
                 <Grid item xs={7}>
                     <CrcContent contents={content} />
                 </Grid>
